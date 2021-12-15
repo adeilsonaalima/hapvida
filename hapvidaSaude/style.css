@@ -1,0 +1,20 @@
+.nav {
+  background-color: transparent;
+}
+
+.navbar .navbar-brand {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  
+  .navbar .navbar-brand > .navbar-item,
+  .navbar .navbar-brand .navbar-link {
+    display: inline-block;
+  }
+  
+  * {font-family: 'Ubuntu', sans-serif;}
+  
+  body {background-color: rgba(62,142,208,255);}
+
+  

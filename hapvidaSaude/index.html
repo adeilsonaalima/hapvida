@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mystyle.scss">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="logo-hap.svg" width="4096" height="28">
+      </a>
+    </div>
+  </nav>
+  
+  <section class="section has-background-info is-small">
+    <div class="container">
+      <div class="box">
+        
+        <h1 class="has-text-info has-text-centered has-text-bold"><b>COTAÇÃO PARA PESSOA FÍSICA</b></h1>
+        <br>
+        
+          <!-- ESTADO -->
+          <div class="field has-addons">
+            <div class="control">
+              <button type="text" class="button is-info is-hovered">ESTADO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            </div>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth is-info"> 
+                  <select name="state" id="state">
+                    <option value="bahia">Bahia</option>
+                    <option value="ceara">Ceará</option>
+                  </select>
+                </div> 
+              </div>
+           </div>
+        
+          <!-- PLANO -->
+          <div class="field has-addons">
+            <div class="control">
+              <button type="text" class="button is-info is-hovered">PLANO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              
+            </div>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth is-info"> 
+                  <select name="plan" id="plan">
+                      <option value="amb">Ambulatorial</option>
+                      <option value="enf">Enfermaria</option>
+                      <option value="apa">Apartamento</option>
+                  </select>
+                </div> 
+              </div>
+           </div>
+        
+          <!-- COPARTICIPAÇÃO -->
+          <div class="field has-addons">
+            <div class="control">
+              <button type="text" class="button is-info is-hovered">COPARTICIPAÇÃO</button>
+            </div>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth is-info"> 
+                  <select name="co-p" id="co-p">
+                      <option value="comco">Com coparticipação</option>
+                      <option value="semco">Sem coparticipação</option>
+                  </select>
+                </div> 
+              </div>
+           </div>
+        
+          <!-- IDADE -->
+          <div class="field has-addons">
+            <div class="control">
+              <button type="text" class="button is-info is-hovered">IDADE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            </div>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth is-info"> 
+                  <select name="age" id="age">
+                      <option value="0-18">0 a 18 anos</option>
+                        <option value="19-23">19 a 23 anos</option>
+                      <option value="24-28">24 a 28 anos</option>
+                      <option value="29-33">29 a 33 anos</option>
+                      <option value="34-38">34 a 38 anos</option>
+                      <option value="39-43">39 a 43 anos</option>
+                      <option value="44-48">44 a 48 anos</option>
+                      <option value="49-53">49 a 53 anos</option>
+                      <option value="54-58">54 a 58 anos</option>
+                      <option value="59+">59 ou + anos</option>   
+                  </select>
+                </div> 
+              </div>
+           </div>
+          
+          <button class="button is-info is-fullwidth" onclick="executeOperation()">SUBMETER ORÇAMENTO</button> <hr>
+        
+        <div class="field has-addons">
+            <div class="control">
+              <button type="text" class="button is-info is-hovered">RESULTADO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            </div>
+              <div class="control is-expanded">
+                <div class="input is-fullwidth is-info"> 
+                  <p id="result"></p>
+                </div> 
+              </div>
+           </div>
+            
+  
+          </div>
+        </div>     
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer has-background-info">
+    <div class="content has-text-centered">
+      <p class="has-text-white">Cotação Hapvida Saúde by <a href="https://github.com/adeilson-adila">Adeilson Ádila</a></p>
+    </div>
+  </footer>
+</body>
+</html>

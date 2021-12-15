@@ -1,0 +1,7 @@
+* {} /* seletor universal */
+li a {} /* seletor de descendência*/
+li > a {} /* seletor filho */
+h1 + h4 {} /* estilo a um h4 que vem logo depois de h1 */
+a[href='/recibo'] {} /* estiliza todos os âncoras que tem recibo */
+li:nth-of-type(2) {} /* seleciona todo item 2*/
+
