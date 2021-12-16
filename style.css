@@ -1,0 +1,15 @@
+.navbar .navbar-brand {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  
+  .navbar .navbar-brand > .navbar-item,
+  .navbar .navbar-brand .navbar-link {
+    display: inline-block;
+  }
+  
+body {
+  background-color: rgb(72,92,196);
+  height: 100vh;
+}
