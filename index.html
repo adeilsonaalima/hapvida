@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <title>Hapvida - Orçamento Individual</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+  <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="logo-hap.svg" width="4096" height="28">
+      </a>
+    </div>
+  </nav>
+ 
+       <!--  SEÇÃO  -->
+  <section class="section has-background-link">
+    <div class="container is-fluid">
+      <div class="box">
+        
+        <!-- H1 -->
+        <h1 class="has-text-link has-text-centered"><b>ORÇAMENTO INDIVIDUAL (COM ODONTOLOGIA)</b></h1> <br>
+        
+        <!-- ESTADO -->
+        <div class="field has-addons">
+          <div class="control">
+            <button type="text" class="button is-link is-hovered has-text-weight-semibold">ESTADO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          </div>
+            <div class="control is-expanded">
+              <div class="select is-fullwidth is-link"> 
+                <select name="state" id="state">
+                  <option value="bahia">Bahia</option>
+                  <option value="ceara">Ceará</option>
+                </select>
+              </div> 
+            </div>
+          </div>
+        
+          <!-- PLANO -->
+          <div class="field has-addons">
+            <div class="control">
+              <button type="text" class="button is-link is-hovered has-text-weight-semibold">PLANO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            </div>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth is-link"> 
+                  <select name="plan" id="plan">
+                      <option value="amb">Ambulatorial s/ acomodação</option>
+                      <option value="enf">Hospitalar c/ enfermaria</option>
+                      <option value="apa">Hospitalar c/ apartamento</option>
+                  </select>
+                </div> 
+              </div>
+           </div>
+        
+          <!-- COPARTICIPAÇÃO -->
+          <div class="field has-addons">
+            <div class="control">
+              <button type="text" class="button is-link is-hovered has-text-weight-semibold">COPARTICIPAÇÃO</button>
+            </div>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth is-link"> 
+                  <select name="co-p" id="co-p">
+                      <option value="comco">Com</option>
+                      <option value="semco">Sem</option>
+                  </select>
+                </div> 
+              </div>
+           </div>
+        
+          <!-- IDADE -->
+          <div class="field has-addons">
+            <div class="control">
+              <button type="text" class="button is-link is-hovered has-text-weight-semibold">IDADE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            </div>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth is-link"> 
+                  <select name="age" id="age">
+                    <option value="0-18">0 a 18 anos</option>
+                    <option value="19-23">19 a 23 anos</option>
+                    <option value="24-28">24 a 28 anos</option>
+                    <option value="29-33">29 a 33 anos</option>
+                    <option value="34-38">34 a 38 anos</option>
+                    <option value="39-43">39 a 43 anos</option>
+                    <option value="44-48">44 a 48 anos</option>
+                    <option value="49-53">49 a 53 anos</option>
+                    <option value="54-58">54 a 58 anos</option>
+                    <option value="59+">59 ou + anos</option>   
+                  </select>
+                </div> 
+              </div>
+           </div>
+          
+          <!-- SUBMETER ORÇAMENTO -->
+          <button class="button is-link is-fullwidth has-text-weight-semibold is-focused" onclick="executeOperation()">SUBMETER ORÇAMENTO</button> <hr>
+        
+          <!-- RESULTADO -->
+          <div class="field has-addons">
+            <div class="control">
+              <button type="text" class="button is-link is-hovered has-text-weight-semibold">PREÇO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            </div>
+              <div class="control is-expanded">
+                <div class="input is-fullwidth is-link"> 
+                  <p id="result"></p>
+               </div> 
+              </div>
+             </div> <br>
+         <article class="message is-link">
+  		    <div class="message-body content">
+		        <p>A ferramenta foi otimizada para utilização no computador, mas também é possível utilizá-la pelo celular (na horizontal).</p>
+		</div>
+	</article>
+            </div>
+           </div>
+         </div>
+       </div>
+     </section>
+ 
+  <!-- RODAPÉ-->
+  <footer class="footer has-background-link">
+    <div class="content has-text-centered ">
+      <p class="has-text-white">Hapvida - Orçamento Individual por <a class="has-text-white" href="https://github.com/adeilson-adila">Adeilson Ádila</a>.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
