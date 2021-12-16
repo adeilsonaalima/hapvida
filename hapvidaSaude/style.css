@@ -9,4 +9,6 @@
     display: inline-block;
   }
   
-body {background-color: rgba(72,92,196,255);}
+body {
+  background-color: rgba(72,92,196,255);
+}
