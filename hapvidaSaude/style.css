@@ -9,14 +9,4 @@
     display: inline-block;
   }
   
-h1 {
-
-}
-  
-body {
-  background-color: rgb(72,92,196);
-}
-
-.1 {
-  font-family: 'Roboto Slab', serif;
-}
+body {background-color: rgba(72,92,196,255);}
