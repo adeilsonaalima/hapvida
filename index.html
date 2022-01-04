@@ -29,7 +29,7 @@
 <body>
 
 <!-- LOGO -->
-  <div class="has-background-link">
+  <div class="container has-background-link">
     <figure class="image">
       <img src="https://cafex.hapvida.com.br/hapvida/linha-frente/assets/img/logo-hapvida-branco.svg"
            style="width: 280px; height: 72px;"
@@ -140,7 +140,7 @@
            </div>
           
           <!-- SUBMETER ORÇAMENTO -->
-          <button class="button is-link is-fullwidth has-text-weight-semibold" onclick="executeOperation()">SUBMETER ORÇAMENTO</button> <hr>
+          <button class="button is-link is-fullwidth has-text-weight-semibold" onclick="executeOperation(); executeCoverage()">SUBMETER ORÇAMENTO</button> <hr>
         
           <!-- RESULTADO -->
           <div class="field has-addons">
@@ -155,7 +155,19 @@
                </div> 
               </div>
              </div>
+           <!-- COBERTURA -->
+           <div class="field has-addons">
+            <div class="control">
+              <button type="text"
+                      class="button is-link is-hovered has-text-weight-semibold"
+                      style="width: 200px; height: 313px;">COBERTURA</button>
             </div>
+            <div class="block">
+              <textarea class="textarea is-link has-text-black" name="result2" id="result2" rows="12" cols="500" disabled></textarea>
+            </div>
+           </div>
+        
+             </div>
            </div>
          </div>
        </div>
