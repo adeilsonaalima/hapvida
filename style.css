@@ -2,5 +2,10 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -30px;
   width: 50%;
+}
+
+body {
+  background-color: rgb(80,92,196);
 }
