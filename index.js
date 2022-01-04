@@ -164,6 +164,21 @@ let jsonVar = {
 },
   }
 }
+
+let jsonCover = {
+  "amb": {
+    "com-odonto": "• urgências e emergências; \n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS); \n• observação de até 12h por dia; \n• pequenas cirurgias, aquelas que não necessitam de um centro cirúrgico ou internação. \n• odontologia preventiva, de urgência e emergência.",
+    "sem-odonto": "• urgências e emergências; \n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS); \n• observação de até 12h por dia; \n• pequenas cirurgias, aquelas que não necessitam de um centro cirúrgico ou internação."
+},
+  "enf": {
+    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS);\n• internação com quarto coletivo mediante franquia (2 pacientes por quarto, com direito a um acompanhante cada);\n• cirurgias de pequeno, médio e grande porte;\n• odontologia completa.\n",
+    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS);\n• internação com quarto coletivo mediante franquia (2 pacientes por quarto, com direito a um acompanhante cada);\n• cirurgias de pequeno, médio e grande porte;\n"
+},
+  "apa": {
+    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS);\n• internação com quarto 100% exclusivo mediante franquia (quarto grande, espaçoso, acomodação para o acompanhante);\n• cirurgias de pequeno, médio e grande porte;\n• odontologia completa.\n",
+    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS);\n• internação com quarto 100% exclusivo mediante franquia (quarto grande, espaçoso, acomodação para o acompanhante);\n• cirurgias de pequeno, médio e grande porte;\n"
+  }
+}
   
 
 function executeOperation(){
@@ -184,5 +199,12 @@ let select5 = document.getElementById('age');
 let value5 = select5.options[select5.selectedIndex].value;
 
 document.getElementById("result").innerHTML = (jsonVar[value1][value2][value3][value4][value5]);
-  
+}
+
+function executeCoverage(){
+  let select6 = document.getElementById('plan');
+  let value6 = select6.options[select6.selectedIndex].value;
+  let select7 = document.getElementById('odonto');
+  let value7 = select7.options[select7.selectedIndex].value;
+  document.getElementById('result2').innerHTML = (jsonCover[value6][value7]);
 }
