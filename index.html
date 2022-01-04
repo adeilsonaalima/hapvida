@@ -21,21 +21,21 @@
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
-    <title>Hapvida - Orçamento Individual</title>
+    <title>Hapvida - Orçamento</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <script src="index.js"></script>
 </head>
 <body>
 
-<!-- NAVBAR -->
-  <nav class="navbar is-link" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="index.html">
-        <img src="logo-hap.svg" width="4096" height="28">
-      </a>
-    </div>
-  </nav>
+<!-- LOGO -->
+  <div class="container has-background-link">
+    <figure class="image">
+      <img src="https://cafex.hapvida.com.br/hapvida/linha-frente/assets/img/logo-hapvida-branco.svg"
+           style="width: 280px; height: 72px;"
+           class="center"</figure>
+  </div>
+
  
        <!--  SEÇÃO  -->
   <section class="section has-background-link">
@@ -43,17 +43,19 @@
       <div class="box">
         
         <!-- H1 -->
-        <h1 class="has-text-link has-text-centered"><b>ORÇAMENTO INDIVIDUAL (COM ODONTOLOGIA)</b></h1> <br>
+        <h1 class="has-text-link has-text-centered"><b>ORÇAMENTO INDIVIDUAL</b></h1> <br>
         
         <!-- ESTADO -->
         <div class="field has-addons">
           <div class="control">
-            <button type="text" class="button is-link is-hovered has-text-weight-semibold">ESTADO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+            <button type="text"
+                    class="button is-link is-hovered has-text-weight-semibold"
+                    style="width: 200px;">ESTADO</button>
           </div>
             <div class="control is-expanded">
               <div class="select is-fullwidth is-link"> 
                 <select name="state" id="state">
-                  <option value="bahia">Bahia</option>
+                  <option value="bahia">BAHIA</option>
                   <option value="ceara">Ceará</option>
                 </select>
               </div> 
@@ -63,14 +65,16 @@
           <!-- PLANO -->
           <div class="field has-addons">
             <div class="control">
-              <button type="text" class="button is-link is-hovered has-text-weight-semibold">PLANO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              <button type="text"
+                      class="button is-link is-hovered has-text-weight-semibold"
+                      style="width: 200px;">PLANO</button>
             </div>
               <div class="control is-expanded">
                 <div class="select is-fullwidth is-link"> 
                   <select name="plan" id="plan">
-                      <option value="amb">Ambulatorial s/ acomodação</option>
-                      <option value="enf">Hospitalar c/ enfermaria</option>
-                      <option value="apa">Hospitalar c/ apartamento</option>
+                      <option value="amb">AMBULATORIAL S/ ACOMODAÇÃO</option>
+                      <option value="enf">HOSPITALAR C/ ENFERMARIA</option>
+                      <option value="apa">HOSPITALAR C/ APARTAMENTO</option>
                   </select>
                 </div> 
               </div>
@@ -79,13 +83,32 @@
           <!-- COPARTICIPAÇÃO -->
           <div class="field has-addons">
             <div class="control">
-              <button type="text" class="button is-link is-hovered has-text-weight-semibold">COPARTICIPAÇÃO</button>
+              <button type="text"
+                      class="button is-link is-hovered has-text-weight-semibold"
+                      style="width: 200px;">COPARTICIPAÇÃO</button>
             </div>
               <div class="control is-expanded">
                 <div class="select is-fullwidth is-link"> 
                   <select name="co-p" id="co-p">
-                      <option value="comco">Com</option>
-                      <option value="semco">Sem</option>
+                      <option value="semco">SEM</option>
+                      <option value="comco">COM</option>
+                  </select>
+                </div> 
+              </div>
+           </div>
+		   
+          <!-- ODONTOLOGIA -->
+          <div class="field has-addons">
+            <div class="control">
+              <button type="text"
+                      class="button is-link is-hovered has-text-weight-semibold"
+                      style="width: 200px;">ODONTOLOGIA</button>
+            </div>
+              <div class="control is-expanded">
+                <div class="select is-fullwidth is-link"> 
+                  <select name="odonto" id="odonto">
+                      <option value="com-odonto">COM</option>
+                      <option value="sem-odonto">SEM</option>
                   </select>
                 </div> 
               </div>
@@ -94,33 +117,37 @@
           <!-- IDADE -->
           <div class="field has-addons">
             <div class="control">
-              <button type="text" class="button is-link is-hovered has-text-weight-semibold">IDADE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              <button type="text"
+                      class="button is-link is-hovered has-text-weight-semibold"
+                      style="width: 200px;">IDADE</button>
             </div>
               <div class="control is-expanded">
                 <div class="select is-fullwidth is-link"> 
                   <select name="age" id="age">
-                    <option value="0-18">0 a 18 anos</option>
-                    <option value="19-23">19 a 23 anos</option>
-                    <option value="24-28">24 a 28 anos</option>
-                    <option value="29-33">29 a 33 anos</option>
-                    <option value="34-38">34 a 38 anos</option>
-                    <option value="39-43">39 a 43 anos</option>
-                    <option value="44-48">44 a 48 anos</option>
-                    <option value="49-53">49 a 53 anos</option>
-                    <option value="54-58">54 a 58 anos</option>
-                    <option value="59+">59 ou + anos</option>   
+                    <option value="0-18">0 A 18 ANOS</option>
+                    <option value="19-23">19 A 23 ANOS</option>
+                    <option value="24-28">24 A 28 ANOS</option>
+                    <option value="29-33">29 A 33 ANOS</option>
+                    <option value="34-38">34 A 38 ANOS</option>
+                    <option value="39-43">39 A 43 ANOS</option>
+                    <option value="44-48">44 A 48 ANOS</option>
+                    <option value="49-53">49 A 53 ANOS</option>
+                    <option value="54-58">54 A 58 ANOS</option>
+                    <option value="59+">59 ANOS OU MAIS</option>   
                   </select>
                 </div> 
               </div>
            </div>
           
           <!-- SUBMETER ORÇAMENTO -->
-          <button class="button is-link is-fullwidth has-text-weight-semibold is-focused" onclick="executeOperation()">SUBMETER ORÇAMENTO</button> <hr>
+          <button class="button is-link is-fullwidth has-text-weight-semibold" onclick="executeOperation()">SUBMETER ORÇAMENTO</button> <hr>
         
           <!-- RESULTADO -->
           <div class="field has-addons">
             <div class="control">
-              <button type="text" class="button is-link is-hovered has-text-weight-semibold">PREÇO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              <button type="text"
+                      class="button is-link is-hovered has-text-weight-semibold"
+                      style="width: 200px;">PREÇO</button>
             </div>
               <div class="control is-expanded">
                 <div class="input is-fullwidth is-link"> 
@@ -137,7 +164,7 @@
   <!-- RODAPÉ-->
   <footer class="footer has-background-link">
     <div class="content has-text-centered ">
-      <p class="has-text-white">Hapvida - Orçamento Individual por <a class="has-text-white" href="https://github.com/adeilson-adila">Adeilson Ádila</a>.</p>
+      <p class="has-text-white">Hapvida - Orçamento por <a class="has-text-white" href="https://github.com/adeilson-adila">Adeilson Ádila</a>.</p>
     </div>
   </footer>
 
