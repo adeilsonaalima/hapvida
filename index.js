@@ -167,16 +167,16 @@ let jsonVar = {
 
 let jsonCover = {
   "amb": {
-    "com-odonto": "• Urgências e emergências;\n• Consultas e exames em todas as especialidades;\n• Observação de até 12h;\n• Pequenas cirurgias.\n• Urgência e emergência odontológica.",
-    "sem-odonto": "• Urgências e emergências;\n• Consultas e exames em todas as especialidades;\n• Observação de até 12h;\n• Pequenas cirurgias."
+    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• observação de até 12h;\n• pequenas cirurgias.\n• urgência e emergência odontológica.",
+    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• observação de até 12h;\n• pequenas cirurgias."
 },
   "enf": {
-    "com-odonto": "• Urgências e emergências;\n• Consultas e exames em todas as especialidades;\n• Internação com quarto coletivo mediante franquia;\n• Cirurgias de pequeno, médio e grande porte;\n• Odontologia completa.",
-    "sem-odonto": "• Urgências e emergências;\n• Consultas e exames em todas as especialidades;\n• Internação com quarto coletivo mediante franquia;\n• Cirurgias de pequeno, médio e grande porte."
+    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• internação com quarto coletivo mediante franquia;\n• cirurgias de pequeno, médio e grande porte;\n• odontologia completa.",
+    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• internação com quarto coletivo mediante franquia;\n• cirurgias de pequeno, médio e grande porte."
 },
   "apa": {
-    "com-odonto": "• Urgências e emergências;\n• Consultas e exames em todas as especialidades;\n• Internação com quarto exclusivo mediante franquia;\n• Cirurgias de pequeno, médio e grande porte;\n• Odontologia completa.",
-    "sem-odonto": "• Urgências e emergências;\n• Consultas e exames em todas as especialidades;\n• Internação com quarto exclusivo mediante franquia;\n• Cirurgias de pequeno, médio e grande porte."
+    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• internação com quarto exclusivo mediante franquia;\n• cirurgias de pequeno, médio e grande porte;\n• odontologia completa.",
+    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• internação com quarto exclusivo mediante franquia;\n• cirurgias de pequeno, médio e grande porte."
   }
 }
   
