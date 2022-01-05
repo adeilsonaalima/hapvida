@@ -167,16 +167,16 @@ let jsonVar = {
 
 let jsonCover = {
   "amb": {
-    "com-odonto": "• urgências e emergências; \n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS); \n• observação de até 12h por dia; \n• pequenas cirurgias, aquelas que não necessitam de um centro cirúrgico ou internação. \n• odontologia preventiva, de urgência e emergência.",
-    "sem-odonto": "• urgências e emergências; \n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS); \n• observação de até 12h por dia; \n• pequenas cirurgias, aquelas que não necessitam de um centro cirúrgico ou internação."
+    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• observação de até 12h;\n• pequenas cirurgias.\n• urgência odontológica.",
+    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• observação de até 12h;\n• pequenas cirurgias."
 },
   "enf": {
-    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS);\n• internação com quarto coletivo mediante franquia (2 pacientes por quarto, com direito a um acompanhante cada);\n• cirurgias de pequeno, médio e grande porte;\n• odontologia completa.\n",
-    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS);\n• internação com quarto coletivo mediante franquia (2 pacientes por quarto, com direito a um acompanhante cada);\n• cirurgias de pequeno, médio e grande porte;\n"
+    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• internação com quarto coletivo mediante franquia;\n• cirurgias de pequeno, médio e grande porte;\n• odontologia completa.",
+    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• internação com quarto coletivo mediante franquia;\n• cirurgias de pequeno, médio e grande porte."
 },
   "apa": {
-    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS);\n• internação com quarto 100% exclusivo mediante franquia (quarto grande, espaçoso, acomodação para o acompanhante);\n• cirurgias de pequeno, médio e grande porte;\n• odontologia completa.\n",
-    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades médicas descritas no rol de procedimentos da Agência Nacional de Saúde (ANS);\n• internação com quarto 100% exclusivo mediante franquia (quarto grande, espaçoso, acomodação para o acompanhante);\n• cirurgias de pequeno, médio e grande porte;\n"
+    "com-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• internação com quarto exclusivo mediante franquia;\n• cirurgias de pequeno, médio e grande porte;\n• odontologia completa.",
+    "sem-odonto": "• urgências e emergências;\n• consultas e exames em todas as especialidades;\n• internação com quarto exclusivo mediante franquia;\n• cirurgias de pequeno, médio e grande porte."
   }
 }
   
