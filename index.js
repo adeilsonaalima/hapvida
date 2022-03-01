@@ -229,7 +229,7 @@ function add() {
     resultLabel.setAttribute("type", "button")
     resultLabel.setAttribute("class", "button is-link has-text-weight-bold")
     resultLabel.setAttribute("style", "width: 87px")
-    resultLabel.innerHTML = age + ":"
+    resultLabel.innerHTML = age
       document.getElementById(controlLabel.getAttribute("id")).appendChild(resultLabel)
 
   let controlValue = document.createElement("div")
@@ -239,14 +239,14 @@ function add() {
 
   let resultValue = document.createElement("div")
     resultValue.setAttribute("class", "input is-fullwidth is-link")
-    resultValue.innerHTML = "R$" + (jsonVar[state][plan][cop][dentistry][age])
+    resultValue.innerHTML = (jsonVar[state][plan][cop][dentistry][age]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     document.getElementById(controlValue.getAttribute("id")).appendChild(resultValue)
 
     sumValue.push(Number(jsonVar[state][plan][cop][dentistry][age]))
   
     if(sumValue.length >= 1) {
       let sum = sumValue.reduce((acc, res) => acc + res)
-      document.getElementById("totalResult").innerHTML = "R$" + sum.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+      document.getElementById("totalResult").innerHTML = sum.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     }
 }
 
