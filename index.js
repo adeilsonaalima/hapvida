@@ -1,4 +1,6 @@
+// contador do DOM
 let count = 0;
+// soma do add()
 let sumValue = [];
 
 let jsonVar = {
