@@ -1,192 +1,224 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>	
+<head>
     <meta charset="UTF-8">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q5XW2Y7PS"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8Q5XW2Y7PS');
-    </script>	
-    <title>Hapvida - Orçamento</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/cf80a8fa31.js" crossorigin="anonymous" defer></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Orçamentos Hapvida!</title>
 </head>
 <body>
 
-<!-- LOGO -->
-  <div class="container has-background-link">
-    <figure class="image">
-      <img src="https://cafex.hapvida.com.br/hapvida/linha-frente/assets/img/logo-hapvida-branco.svg"
-           style="width: 280px; height: 72px;"
-           class="center"</figure>
-  </div>
+    <header class="header has-background-link">
+        <div name="draggable" id="draggable">
+            <div name="move" id="move">
+                <img src="./images/logo-hap.png" alt="">
+            </div>
+        </div>
+    </header>
 
- 
-       <!--  SEÇÃO  -->
-  <section class="section has-background-link">
-    <div class="container is-fluid">
-      <div class="box">
-        
-        <!-- H1 -->
-        <h1 class="has-text-link has-text-centered"><b>ORÇAMENTO INDIVIDUAL</b></h1> <br>
-        
-        <!-- ESTADO -->
-        <div class="field has-addons">
-          <div class="control">
-            <button type="text"
-                    class="button is-link is-hovered has-text-weight-semibold"
-                    style="width: 200px;">ESTADO</button>
-          </div>
-            <div class="control is-expanded">
-              <div class="select is-fullwidth is-link"> 
-                <select name="state" id="state">
-                  <option value="bahia">BAHIA</option>
-                  <option value="ceara">Ceará</option>
-                </select>
-              </div> 
-            </div>
-          </div>
-        
-          <!-- PLANO -->
-          <div class="field has-addons">
-            <div class="control">
-              <button type="text"
-                      class="button is-link is-hovered has-text-weight-semibold"
-                      style="width: 200px;">PLANO</button>
-            </div>
-              <div class="control is-expanded">
-                <div class="select is-fullwidth is-link"> 
-                  <select name="plan" id="plan">
-                      <option value="amb">AMBULATORIAL S/ ACOMODAÇÃO</option>
-                      <option value="enf">HOSPITALAR C/ ENFERMARIA</option>
-                      <option value="apa">HOSPITALAR C/ APARTAMENTO</option>
-                  </select>
-                </div> 
-              </div>
-           </div>
-        
-          <!-- COPARTICIPAÇÃO -->
-          <div class="field has-addons">
-            <div class="control">
-              <button type="text"
-                      class="button is-link is-hovered has-text-weight-semibold"
-                      style="width: 200px;">COPARTICIPAÇÃO</button>
-            </div>
-              <div class="control is-expanded">
-                <div class="select is-fullwidth is-link"> 
-                  <select name="co-p" id="co-p">
-                      <option value="semco">SEM</option>
-                      <option value="comco">COM</option>
-                  </select>
-                </div> 
-              </div>
-           </div>
-		   
-          <!-- ODONTOLOGIA -->
-          <div class="field has-addons">
-            <div class="control">
-              <button type="text"
-                      class="button is-link is-hovered has-text-weight-semibold"
-                      style="width: 200px;">ODONTOLOGIA</button>
-            </div>
-              <div class="control is-expanded">
-                <div class="select is-fullwidth is-link"> 
-                  <select name="odonto" id="odonto">
-                      <option value="com-odonto">COM</option>
-                      <option value="sem-odonto">SEM</option>
-                  </select>
-                </div> 
-              </div>
-           </div>
-        
-          <!-- IDADE -->
-          <div class="field has-addons">
-            <div class="control">
-              <button type="text"
-                      class="button is-link is-hovered has-text-weight-semibold"
-                      style="width: 200px;">IDADE</button>
-            </div>
-              <div class="control is-expanded">
-                <div class="select is-fullwidth is-link"> 
-                  <select name="age" id="age">
-                    <option value="0-18">0 A 18 ANOS</option>
-                    <option value="19-23">19 A 23 ANOS</option>
-                    <option value="24-28">24 A 28 ANOS</option>
-                    <option value="29-33">29 A 33 ANOS</option>
-                    <option value="34-38">34 A 38 ANOS</option>
-                    <option value="39-43">39 A 43 ANOS</option>
-                    <option value="44-48">44 A 48 ANOS</option>
-                    <option value="49-53">49 A 53 ANOS</option>
-                    <option value="54-58">54 A 58 ANOS</option>
-                    <option value="59+">59 ANOS OU MAIS</option>   
-                  </select>
-                </div> 
-              </div>
-           </div>
+
+    <section class="section has-background-link">
+
+        <div class="columns is-multiline is-mobile">
           
-          <!-- SUBMETER ORÇAMENTO -->
-          <button class="button is-link is-fullwidth has-text-weight-semibold" onclick="executeOperation(); executeCoverage()">SUBMETER ORÇAMENTO</button> <hr>
-        
-          <!-- RESULTADO -->
-          <div class="field has-addons">
-            <div class="control">
-              <button type="text"
-                      class="button is-link is-hovered has-text-weight-semibold"
-                      style="width: 200px;">PREÇO</button>
-            </div>
-              <div class="control is-expanded">
-                <div class="input is-fullwidth is-link"> 
-                  <p id="result"></p>
-               </div> 
+          <!--COLUNA 1-->
+          <div class="column is-half is-narrow">
+            <div class="box">
+      
+              <p class="title is-5 has-text-centered has-text-link has-text-weight-bold">Orçamento</p>
+      
+              <!--ESTADO-->
+              <div class="field has-addons">
+      
+                <!--LABEL-->
+                <div class="control">
+                  <button type="text" class="button is-link has-text-weight-bold" style="padding-right: 80px">Estado</button>
+                </div>
+      
+                <!--SELECT-->
+                <div class="control is-expanded">
+                  <div class="select is-link is-hovered is-fullwidth">
+                    <select name="state" id="state">
+                      <option value="bahia">Bahia</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-             </div>
-           <!-- COBERTURA -->
-           <div class="field has-addons">
-            <div class="control block">
-              <button type="text"
-                      class="button is-link is-hovered has-text-weight-semibold"
-                      style="width: 200px; height: 192px;">COBERTURA</button>
+      
+              <!--PLANO-->
+              <div class="field has-addons">
+      
+                <!--LABEL-->
+                <div class="control">
+                  <button type="text" class="button is-link has-text-weight-bold" style="padding-right: 89px">Plano</button>
+                </div>
+      
+                <!--SELECT-->
+                <div class="control is-expanded">
+                  <div class="select is-link is-hovered is-fullwidth">
+                    <select name="plan" id="plan">
+                      <option value="outpatient">Ambulatorial s/ acomodação</option>
+                      <option value="nursery">Hospitalar c/ enfermaria</option>
+                      <option value="apartment">Hospitalar c/ apartamento</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+      
+              <!--COPARTICIPAÇÃO-->
+              <div class="field has-addons">
+      
+                <!--LABEL-->
+                <div class="control">
+                  <button type="text" class="button is-link has-text-weight-bold" style="padding-right: 20px">Coparticipação</button>
+                </div>
+      
+                <!--SELECT-->
+                <div class="control is-expanded">
+                  <div class="select is-link is-hovered is-fullwidth">
+                    <select name="co-p" id="co-p">
+                      <option value="withCoP">Com</option>
+                      <option value="withoutCoP">Sem</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+      
+              <!--ODONTOLOGIA-->
+              <div class="field has-addons">
+      
+                <!--LABEL-->
+                <div class="control">
+                  <button type="text" class="button is-link has-text-weight-bold" style="padding-right: 37px">Odontologia</button>
+                </div>
+      
+                <!--SELECT-->
+                <div class="control is-expanded">
+                  <div class="select is-link is-hovered is-fullwidth">
+                    <select name="dentistry" id="dentistry">
+                      <option value="withDentistry">Com</option>
+                      <option value="withoutDentistry">Sem</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+      
+              <!--IDADE-->
+              <div class="field has-addons">
+      
+                <!--LABEL-->
+                <div class="control">
+                  <button type="text" class="button is-link has-text-weight-bold" style="padding-right: 90px">Idade</button>
+                </div>
+      
+                <!--SELECT-->
+                <div class="control is-expanded">
+                  <div class="select is-link is-hovered is-fullwidth">
+                    <select name="age" id="age">
+                      <option value="0-18">0 a 18 anos</option>
+                      <option value="19-23">19 a 23 anos</option>
+                      <option value="24-28">24 a 28 anos</option>
+                      <option value="29-33">29 a 33 anos</option>
+                      <option value="34-38">34 a 38 anos</option>
+                      <option value="39-43">39 a 43 anos</option>
+                      <option value="44-48">44 a 48 anos</option>
+                      <option value="49-53">49 a 53 anos</option>
+                      <option value="54-58">54 a 58 anos</option>
+                      <option value="59+">59 anos ou mais</option> 
+                    </select>
+                  </div>
+                </div>
+              </div>
+      
+              <hr>
+      
+              <!--ENVIAR, ADICIONAR E RESETAR-->
+              <div class="field is-grouped is-grouped-centered">
+                <p class="control">
+                  <button onclick="send(); coverage()" class="button is-link is-hovered" name="send" id="send">
+                    <i class="fa-solid fa-paper-plane fa-beat"></i>
+                  </button>
+                </p>
+                <p class="control">
+                  <button onclick="add(); coverage()" class="button is-link is-hovered" name="add" id="add">
+                    <i class="fa-solid fa-plus fa-beat"></i>
+                  </button>
+                </p>
+                <p class="control">
+                  <button onclick="cancel()" class="button is-danger">
+                    <i class="fa-solid fa-ban fa-beat"></i>
+                  </button>
+                </p>
+              </div>
+      
             </div>
-            <div class="block">
-              <textarea class="textarea is-link has-text-black" name="result2" id="result2" rows="7" cols="500" disabled></textarea>
+          </div>
+          
+          <!--COLUNA 2-->
+          <div class="column is-half">
+            <div class="box">
+      
+              <!--COBERTURA-->   
+              <article class="message is-link">  
+                <div class="message-header">
+                  <p>Cobertura</p>
+                </div>
+                <div class="message-body has-text-black">
+                  <p id="coverage"></p>
+                </div>
+              </article>
+              
+              <!--DOM LINK-->
+              <div name="indexField" id="indexField"></div>
+              
+              <br>
+              
+              <!--VALOR TOTAL-->
+              <div class="field has-addons">
+      
+                <!--LABEL-->
+                <div class="control">
+                  <button type="text" class="button is-link has-text-weight-bold" style="width: 87px">Total </button>
+                </div>
+      
+                <!--SELECT-->
+                <div class="control is-expanded">
+                  <div class="input is-link is-hovered is-fullwidth">
+                    <p name="totalResult" id="totalResult"></p>
+                  </div>
+                </div>
+              </div>
             </div>
-           </div>
-        
-             </div>
-           </div>
-         </div>
-       </div>
-     </section>
- 
-  <!-- RODAPÉ-->
-  <footer class="footer has-background-link">
-    <div class="content has-text-centered ">
-      <p class="has-text-white">Hapvida - Orçamento por <a class="has-text-white" href="https://github.com/adeilson-adila">Adeilson Ádila</a>.</p>
-    </div>
-  </footer>
+          </div>
+        </div>
+      </section>
+
+    <footer class="footer has-background-link">
+        <div class="content has-text-centered has-text-white">
+          <p>
+            <strong class="has-text-link-light">Orçamento Hapvida</strong> por <a class="has-text-link-light" href="https://github.com/Adeilson-Adila">Adeilson Á. A. Lima</a>. O código fonte é licenciado 
+            <a class="has-text-link-light" href="http://opensource.org/licenses/mit-license.php">MIT</a>. O conteúdo do site é licenciado <a class="has-text-link-light" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+    </footer>      
 
 </body>
 </html>
