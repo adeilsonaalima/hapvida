@@ -227,7 +227,7 @@ function add() {
 
   let resultLabel = document.createElement("button")
     resultLabel.setAttribute("type", "button")
-    resultLabel.setAttribute("class", "button is-link")
+    resultLabel.setAttribute("class", "button is-link has-text-weight-bold")
     resultLabel.setAttribute("style", "width: 87px")
     resultLabel.innerHTML = age + ":"
       document.getElementById(controlLabel.getAttribute("id")).appendChild(resultLabel)
