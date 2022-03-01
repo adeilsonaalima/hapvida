@@ -1,11 +1,21 @@
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -50px;
-  width: 50%;
-}
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -30px;
+    width: 50%;
+  }
 
-body {
-  background-color: rgb(80,92,196);
-}
+  #draggable {
+    position: absolute;
+  }
+
+  #move {
+    width: 50%;
+    margin-top: 0%;
+    margin-left: 40%;
+  }
+
+  .header {
+    height: 80px;
+  }
