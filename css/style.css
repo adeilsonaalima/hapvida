@@ -6,20 +6,15 @@
     width: 50%;
   }
 
-  #draggable {
-    position: absolute;
-  }
-
-  #move {
-    width: 50%;
-    margin-top: 2%;
-    margin-left: 22%;
-  }
-
-  .header {
-    height: 80px;
-  }
-
   body {
     background-color: #485fc7;    
+  }
+
+  #draggable {
+    background-color: transparent;
+    border: none;
+    margin-left: 20%;
+    margin-bottom: -5%;
+    padding-top: 0%;
+    width: 50%
   }
