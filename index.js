@@ -246,7 +246,7 @@ function add() {
   
     if(sumValue.length >= 1) {
       let sum = sumValue.reduce((acc, res) => acc + res)
-      document.getElementById("totalResult").innerHTML = "R$" + (sum)
+      document.getElementById("totalResult").innerHTML = "R$" + (ParseInt(sum))
     }
 }
 
