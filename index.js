@@ -193,7 +193,7 @@ function send() {
   let dentistry = document.querySelector("select[id='dentistry']").value;
   let age = document.querySelector("select[id='age']").value;
   
-    document.getElementById("totalResult").innerHTML = "R$" + (jsonVar[state][plan][cop][dentistry][age]);
+    document.getElementById("totalResult").innerHTML = (jsonVar[state][plan][cop][dentistry][age]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   
     document.getElementById("add").disabled = true;
   
