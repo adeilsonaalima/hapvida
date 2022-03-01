@@ -172,7 +172,7 @@ let jsonVar = {
 
 let jsonCover = {
   "outpatient": {
-    "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias.<br>• urgência e emergência odontológica.",
+    "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias;<br>• urgência e emergência odontológica.",
     "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias."
 },
   "nursery": {
