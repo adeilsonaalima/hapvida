@@ -3,7 +3,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: -30px;
-    width: 50%;
+    width: 25%;
+    
   }
 
   #draggable {
@@ -11,9 +12,7 @@
   }
 
   #move {
-    width: 50%;
-    margin-top: 0%;
-    margin-left: 40%;
+    width: 40%;
   }
 
   .header {
