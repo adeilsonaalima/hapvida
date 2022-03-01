@@ -12,9 +12,12 @@
 
   #draggable {
     background-color: transparent;
-    border: none;
-    margin-left: 20%;
-    margin-bottom: -5%;
-    padding-top: 0%;
-    width: 50%
+    border: none;    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .size {
+  height: 100px;  
   }
