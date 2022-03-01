@@ -195,7 +195,7 @@ function send() {
   let dentistry = document.querySelector("select[id='dentistry']").value;
   let age = document.querySelector("select[id='age']").value;
   
-    document.getElementById("totalResult").innerHTML = (jsonVar[state][plan][cop][dentistry][age]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    document.getElementById("totalResult").innerHTML = Number((jsonVar[state][plan][cop][dentistry][age])).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   
     document.getElementById("add").disabled = true;
   
@@ -241,7 +241,7 @@ function add() {
 
   let resultValue = document.createElement("div")
     resultValue.setAttribute("class", "input is-fullwidth is-link")
-    resultValue.innerHTML = (jsonVar[state][plan][cop][dentistry][age]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    resultValue.innerHTML = Number((jsonVar[state][plan][cop][dentistry][age])).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     document.getElementById(controlValue.getAttribute("id")).appendChild(resultValue)
 
     sumValue.push(Number(jsonVar[state][plan][cop][dentistry][age]))
