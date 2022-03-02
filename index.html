@@ -19,10 +19,10 @@
     <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="./favicon/manifest.json">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Orçamentos Hapvida!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="preload">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" rel="preload">
+    <link rel="stylesheet" href="/css/style.css" rel="preload">
+    <title>Orçamentos Hapvida</title>
 </head>
 <body>
 
@@ -149,17 +149,17 @@
               <!--ENVIAR, ADICIONAR E RESETAR-->
               <div class="field is-grouped is-grouped-centered">
                 <p class="control">
-                  <button onclick="send(); coverage()" class="button is-link is-hovered" name="send" id="send">
+                  <button onclick="send(); coverage()" class="button is-link is-hovered" name="send" id="send" aria-label="Enviar">
                     <i class="fa-solid fa-paper-plane fa-beat"></i>
                   </button>
                 </p>
                 <p class="control">
-                  <button onclick="add(); coverage()" class="button is-link is-hovered" name="add" id="add">
+                  <button onclick="add(); coverage()" class="button is-link is-hovered" name="add" id="add" aria-label="Adicionar">
                     <i class="fa-solid fa-plus fa-beat"></i>
                   </button>
                 </p>
                 <p class="control">
-                  <button onclick="cancel()" class="button is-danger">
+                  <button onclick="clear()" class="button is-danger" aria-label="Limpar">
                     <i class="fa-solid fa-ban fa-beat"></i>
                   </button>
                 </p>
@@ -217,10 +217,15 @@
         </div>
     </footer>      
 
+		// Awasome 5 Icons
     <script src="https://kit.fontawesome.com/cf80a8fa31.js" crossorigin="anonymous" defer></script>
+
+		// jQuery
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script src="index.js" defer></script>
+
+		// Script
+    <script src="script.js" defer></script>
     
 </body>
 </html>

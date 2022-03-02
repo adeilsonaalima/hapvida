@@ -262,7 +262,7 @@ function coverage(){
     document.getElementById('coverage').innerHTML = (jsonCover[plan][dentistry]);
 }
 
-function cancel() {
+function clear() {
   
   event.preventDefault();
   
