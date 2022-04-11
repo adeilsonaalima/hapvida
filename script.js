@@ -335,18 +335,35 @@ let jsonVar = {
 }
 
 let jsonCover = {
-  "outpatient": {
-    "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias;<br>• urgência e emergência odontológica.",
-    "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias."
-},
-  "nursery": {
-    "withDentistry": "• urgências e emergências;<br> • consultas e exames em todas as especialidades;<br>• internação com quarto coletivo mediante franquia;<br>• cirurgias de pequeno, médio e grande porte;<br>• odontologia completa.",
-    "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto coletivo mediante franquia;<br>• cirurgias de pequeno, médio e grande porte."
-},
-  "apartment": {
-    "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto exclusivo mediante franquia;<br>• cirurgias de pequeno, médio e grande porte;<br>• odontologia completa.",
-    "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto exclusivo mediante franquia;<br>• cirurgias de pequeno, médio e grande porte."
+  "bahia": {
+    "outpatient": {
+      "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias;<br>• urgência e emergência odontológica.",
+      "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias."
+    },
+    "nursery": {
+      "withDentistry": "• urgências e emergências;<br> • consultas e exames em todas as especialidades;<br>• internação com quarto coletivo mediante franquia;<br>• cirurgias de pequeno, médio e grande porte;<br>• odontologia completa.",
+      "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto coletivo mediante franquia;<br>• cirurgias de pequeno, médio e grande porte."
+    },
+    "apartment": {
+      "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto exclusivo mediante franquia;<br>• cirurgias de pequeno, médio e grande porte;<br>• odontologia completa.",
+      "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto exclusivo mediante franquia;<br>• cirurgias de pequeno, médio e grande porte."
+    }
+  },
+  "ceara": {
+    "outpatient": {
+      "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias;<br>• urgência e emergência odontológica.",
+      "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias."
+    },
+    "nursery": {
+      "withDentistry": "• urgências e emergências;<br> • consultas e exames em todas as especialidades;<br>• internação com quarto coletivo;<br>• cirurgias de pequeno, médio e grande porte;<br>• odontologia completa.",
+      "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto coletivo;<br>• cirurgias de pequeno, médio e grande porte."
+    },
+    "apartment": {
+      "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto exclusivo;<br>• cirurgias de pequeno, médio e grande porte;<br>• odontologia completa.",
+      "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto exclusivo;<br>• cirurgias de pequeno, médio e grande porte."
+    }    
   }
+  
 }
 
 function send() {
@@ -420,10 +437,11 @@ function coverage(){
   
   event.preventDefault();
   
+  let state = document.querySelector("select[id='state']").value
   let plan = document.querySelector("select[id='plan']").value
   let dentistry = document.querySelector("select[id='dentistry']").value
   
-    document.getElementById('coverage').innerHTML = (jsonCover[plan][dentistry]);
+    document.getElementById('coverage').innerHTML = (jsonCover[state][plan][dentistry]);
 }
 
 function reload() {
