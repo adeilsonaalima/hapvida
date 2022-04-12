@@ -1,9 +1,23 @@
+// Classe de Pessoas
+class Person {
+  constructor(state, plan, cop, dentistry, age) {
+    this.state = state
+    this.plan = plan
+    this.cop = cop
+    this.dentistry = dentistry
+    this.age = age
+  }
+}
+
 // contador do DOM
 let count = 0;
 // soma do add()
-let sumValue = [];
+let sumValue = 0;
+// contador de pessoas
+let personCount = 0;
 
-let jsonVar = {
+// Estrutura JSON de valores.
+let jsonValue = {
 "bahia": {
 "outpatient": {
 "withCoP": {
@@ -332,9 +346,12 @@ let jsonVar = {
     }
     },
     }
-}
+} 
 
-let jsonCover = {
+// Estrutura JSON de coberturas.
+let jsonCover = { 
+  
+  // Ceará
   "bahia": {
     "outpatient": {
       "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias;<br>• urgência e emergência odontológica.",
@@ -349,6 +366,8 @@ let jsonCover = {
       "withoutDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• internação com quarto exclusivo mediante franquia;<br>• cirurgias de pequeno, médio e grande porte."
     }
   },
+  
+  // Ceará
   "ceara": {
     "outpatient": {
       "withDentistry": "• urgências e emergências;<br>• consultas e exames em todas as especialidades;<br>• observação de até 12h;<br>• pequenas cirurgias;<br>• urgência e emergência odontológica.",
@@ -364,8 +383,9 @@ let jsonCover = {
     }    
   }
   
-}
+} 
 
+// Orçamento individual
 function send() {
   
   event.preventDefault();
@@ -376,9 +396,9 @@ function send() {
   let dentistry = document.querySelector("select[id='dentistry']").value;
   let age = document.querySelector("select[id='age']").value;
   
-    document.getElementById("totalResult").innerHTML = Number((jsonVar[state][plan][cop][dentistry][age])).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  let person = new Person(state, plan, cop, dentistry, age)
   
-    document.getElementById("add").disabled = true;
+    document.getElementById("totalResult").innerHTML = Number(jsonValue[person.state][person.plan][person.cop][person.dentistry][person.age]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   
 }
   
@@ -396,41 +416,56 @@ function add() {
     document.getElementById("plan").disabled = true;
     document.getElementById("co-p").disabled = true;
     document.getElementById("dentistry").disabled = true;
-    document.getElementById("send").disabled = true;  
-
-  let controlField = document.createElement("div")
-    controlField.setAttribute("class", "field has-addons")
-    controlField.setAttribute("id", "field" + count++)
-    document.getElementById("indexField").appendChild(controlField)
-
-  let controlLabel = document.createElement("div")
-    controlLabel.setAttribute("class", "control")
-    controlLabel.setAttribute("id", "controlLabel" + count)
-    document.getElementById(controlField.getAttribute("id")).appendChild(controlLabel)
-
-  let resultLabel = document.createElement("button")
-    resultLabel.setAttribute("type", "button")
-    resultLabel.setAttribute("class", "button is-link has-text-weight-bold")
-    resultLabel.setAttribute("style", "width: 87px")
-    resultLabel.innerHTML = age
-      document.getElementById(controlLabel.getAttribute("id")).appendChild(resultLabel)
-
-  let controlValue = document.createElement("div")
-    controlValue.setAttribute("class", "control is-expanded")
-    controlValue.setAttribute("id", "controlValue" + count)
-    document.getElementById(controlField.getAttribute("id")).appendChild(controlValue)  
-
-  let resultValue = document.createElement("div")
-    resultValue.setAttribute("class", "input is-fullwidth is-link")
-    resultValue.innerHTML = Number((jsonVar[state][plan][cop][dentistry][age])).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    document.getElementById(controlValue.getAttribute("id")).appendChild(resultValue)
-
-    sumValue.push(Number(jsonVar[state][plan][cop][dentistry][age]))
+    document.getElementById("send").disabled = true;
   
-    if(sumValue.length >= 1) {
-      let sum = sumValue.reduce((acc, res) => acc + res)
-      document.getElementById("totalResult").innerHTML = sum.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    }
+  let person = new Person(state, plan, cop, dentistry, age);
+    person.value = Number(jsonValue[person.state][person.plan][person.cop][person.dentistry][person.age]);
+      sumValue = sumValue + person.value;
+      personCount ++
+  
+  // first child
+  let controlField = document.createElement("div");
+    controlField.setAttribute("class", "field has-addons");
+    controlField.setAttribute("id", "field" + count++);
+    document.getElementById("indexField").appendChild(controlField);
+    
+    
+    let controlLabel = document.createElement("div");
+      controlLabel.setAttribute("class", "control");
+      controlLabel.setAttribute("id", "controlLabel" + count);
+        document.getElementById(controlField.getAttribute("id")).appendChild(controlLabel);
+
+      let resultLabel = document.createElement("button");
+        resultLabel.setAttribute("type", "button");
+        resultLabel.setAttribute("class", "button is-link has-text-weight-bold");
+        resultLabel.setAttribute("style", "width: 87px");
+        resultLabel.innerHTML = age;
+          document.getElementById(controlLabel.getAttribute("id")).appendChild(resultLabel);
+
+      let controlValue = document.createElement("div")
+        controlValue.setAttribute("class", "control is-expanded")
+        controlValue.setAttribute("id", "controlValue" + count)
+          document.getElementById(controlField.getAttribute("id")).appendChild(controlValue)  
+
+        let resultValue = document.createElement("div")
+          resultValue.setAttribute("class", "input is-fullwidth is-link")
+          resultValue.innerHTML = person.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+          document.getElementById(controlValue.getAttribute("id")).appendChild(resultValue)
+
+   document.getElementById("totalResult").innerHTML = sumValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  
+  let controlRemove = document.createElement("div")
+      controlRemove.setAttribute("class", "control")
+      controlRemove.setAttribute("id", "controlRemove" + count)
+        document.getElementById(controlField.getAttribute("id")).appendChild(controlRemove)
+
+      let removeBtnLabel = document.createElement("button")
+        removeBtnLabel.setAttribute("type", "button")
+        removeBtnLabel.setAttribute("class", "button is-danger has-text-weight-bold")
+        removeBtnLabel.setAttribute("style", "width: 50px")
+        removeBtnLabel.setAttribute("onclick", `personRemove(this.parentNode, ${person.value})`)
+        removeBtnLabel.innerHTML = `<i class="fa-solid fa-ban"></i>`
+          document.getElementById(controlRemove.getAttribute("id")).appendChild(removeBtnLabel) 
 }
 
 function coverage(){
@@ -449,6 +484,22 @@ function reload() {
   event.preventDefault();
   
   document.location.reload(true);
+}
+
+function personRemove(person, value) {
+  personCount -= 1
+  sumValue -= value
+  person.parentNode.remove()
+  document.getElementById("totalResult").innerHTML = sumValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  if(personCount == 0) {
+    document.getElementById("state").disabled = false;
+    document.getElementById("plan").disabled = false;
+    document.getElementById("co-p").disabled = false;
+    document.getElementById("dentistry").disabled = false;
+    document.getElementById("send").disabled = false;
+    document.getElementById("totalResult").innerHTML = ""
+    document.getElementById('coverage').innerHTML = ""
+  }
 }
 
 $( function() {
