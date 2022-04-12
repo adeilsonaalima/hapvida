@@ -400,23 +400,31 @@ function send() {
   
     document.getElementById("totalResult").innerHTML = Number(jsonValue[person.state][person.plan][person.cop][person.dentistry][person.age]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   
+  coverage()
+  
 }
   
 function add() {
   
   event.preventDefault();
   
+  
   let state = document.querySelector("select[id='state']").value
   let plan = document.querySelector("select[id='plan']").value
   let cop = document.querySelector("select[id=co-p]").value
   let dentistry = document.querySelector("select[id='dentistry']").value
   let age = document.querySelector("select[id='age']").value
+  
+    document.getElementById("state").removeAttribute("onchange")
+    document.getElementById("plan").removeAttribute("onchange")
+    document.getElementById("co-p").removeAttribute("onchange")
+    document.getElementById("dentistry").removeAttribute("onchange")
+    document.getElementById("age").removeAttribute("onchange")
 
     document.getElementById("state").disabled = true;
     document.getElementById("plan").disabled = true;
     document.getElementById("co-p").disabled = true;
     document.getElementById("dentistry").disabled = true;
-    document.getElementById("send").disabled = true;
   
   let person = new Person(state, plan, cop, dentistry, age);
     person.value = Number(jsonValue[person.state][person.plan][person.cop][person.dentistry][person.age]);
@@ -481,26 +489,33 @@ function coverage(){
     document.getElementById('coverage').innerHTML = (jsonCover[state][plan][dentistry]);
 }
 
-function reload() {
+// Guardado
+// function reload() {
   
-  event.preventDefault();
-  
-  document.location.reload(true);
-}
+//   event.preventDefault();
+//   document.location.reload(true);
+// }
 
 function personRemove(person, value) {
   personCount -= 1
   sumValue -= value
   person.parentNode.remove()
   document.getElementById("totalResult").innerHTML = sumValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  
+   document.getElementById("state").setAttribute("onchange", "send()")
+   document.getElementById("plan").setAttribute("onchange", "send()")
+   document.getElementById("co-p").setAttribute("onchange", "send()")
+   document.getElementById("dentistry").setAttribute("onchange", "send()")
+   document.getElementById("age").setAttribute("onchange", "send()")
+  
   if(personCount == 0) {
     document.getElementById("state").disabled = false;
     document.getElementById("plan").disabled = false;
     document.getElementById("co-p").disabled = false;
     document.getElementById("dentistry").disabled = false;
-    document.getElementById("send").disabled = false;
     document.getElementById("totalResult").innerHTML = ""
     document.getElementById('coverage').innerHTML = ""
+    
   }
 }
 
