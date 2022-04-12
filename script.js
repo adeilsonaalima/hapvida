@@ -451,6 +451,8 @@ function add() {
           resultValue.setAttribute("class", "input is-fullwidth is-link")
           resultValue.innerHTML = person.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
           document.getElementById(controlValue.getAttribute("id")).appendChild(resultValue)
+  
+
 
    document.getElementById("totalResult").innerHTML = sumValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   
@@ -464,7 +466,7 @@ function add() {
         removeBtnLabel.setAttribute("class", "button is-danger has-text-weight-bold")
         removeBtnLabel.setAttribute("style", "width: 50px")
         removeBtnLabel.setAttribute("onclick", `personRemove(this.parentNode, ${person.value})`)
-        removeBtnLabel.innerHTML = `<i class="fa-solid fa-ban"></i>`
+        removeBtnLabel.innerHTML = `<i class="fa-solid fa-trash"></i>`
           document.getElementById(controlRemove.getAttribute("id")).appendChild(removeBtnLabel) 
 }
 
