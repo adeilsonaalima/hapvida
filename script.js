@@ -524,5 +524,5 @@ $( function() {
 } );
 
 $(document).ready( function () {
-  send();
+  send()
 });
