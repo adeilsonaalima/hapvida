@@ -385,8 +385,6 @@ let jsonCover = {
   
 } 
 
-window.open(send();)
-
 // Orçamento individual
 function send() {
   
@@ -524,3 +522,7 @@ function personRemove(person, value) {
 $( function() {
   $( "#draggable" ).draggable();
 } );
+
+$(document).ready( function () {
+  send();
+});
