@@ -1,11 +1,11 @@
 // Classe de Pessoas
 class Person {
   constructor(state, plan, cop, dentistry, age) {
-    this.state = state
-    this.plan = plan
-    this.cop = cop
-    this.dentistry = dentistry
-    this.age = age
+    this.state = state;
+    this.plan = plan;
+    this.cop = cop;
+    this.dentistry = dentistry;
+    this.age = age;
   }
 }
 
@@ -396,11 +396,11 @@ function send() {
   let dentistry = document.querySelector("select[id='dentistry']").value;
   let age = document.querySelector("select[id='age']").value;
   
-  let person = new Person(state, plan, cop, dentistry, age)
+  let person = new Person(state, plan, cop, dentistry, age);
   
     document.getElementById("totalResult").innerHTML = Number(jsonValue[person.state][person.plan][person.cop][person.dentistry][person.age]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   
-  coverage()
+  coverage();
   
 }
   
@@ -409,17 +409,17 @@ function add() {
   event.preventDefault();
   
   
-  let state = document.querySelector("select[id='state']").value
-  let plan = document.querySelector("select[id='plan']").value
-  let cop = document.querySelector("select[id=co-p]").value
-  let dentistry = document.querySelector("select[id='dentistry']").value
-  let age = document.querySelector("select[id='age']").value
+  let state = document.querySelector("select[id='state']").value;
+  let plan = document.querySelector("select[id='plan']").value;
+  let cop = document.querySelector("select[id=co-p]").value;
+  let dentistry = document.querySelector("select[id='dentistry']").value;
+  let age = document.querySelector("select[id='age']").value;
   
-    document.getElementById("state").removeAttribute("onchange")
-    document.getElementById("plan").removeAttribute("onchange")
-    document.getElementById("co-p").removeAttribute("onchange")
-    document.getElementById("dentistry").removeAttribute("onchange")
-    document.getElementById("age").removeAttribute("onchange")
+    document.getElementById("state").removeAttribute("onchange");
+    document.getElementById("plan").removeAttribute("onchange");
+    document.getElementById("co-p").removeAttribute("onchange");
+    document.getElementById("dentistry").removeAttribute("onchange");
+    document.getElementById("age").removeAttribute("onchange");
 
     document.getElementById("state").disabled = true;
     document.getElementById("plan").disabled = true;
@@ -429,7 +429,7 @@ function add() {
   let person = new Person(state, plan, cop, dentistry, age);
     person.value = Number(jsonValue[person.state][person.plan][person.cop][person.dentistry][person.age]);
       sumValue = sumValue + person.value;
-      personCount ++
+      personCount ++;
   
   // first child
   let controlField = document.createElement("div");
@@ -450,41 +450,41 @@ function add() {
         resultLabel.innerHTML = age;
           document.getElementById(controlLabel.getAttribute("id")).appendChild(resultLabel);
 
-      let controlValue = document.createElement("div")
-        controlValue.setAttribute("class", "control is-expanded")
-        controlValue.setAttribute("id", "controlValue" + count)
-          document.getElementById(controlField.getAttribute("id")).appendChild(controlValue)  
+      let controlValue = document.createElement("div");
+        controlValue.setAttribute("class", "control is-expanded");
+        controlValue.setAttribute("id", "controlValue" + count);
+          document.getElementById(controlField.getAttribute("id")).appendChild(controlValue);
 
-        let resultValue = document.createElement("div")
-          resultValue.setAttribute("class", "input is-fullwidth is-link")
+        let resultValue = document.createElement("div");
+          resultValue.setAttribute("class", "input is-fullwidth is-link");
           resultValue.innerHTML = person.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-          document.getElementById(controlValue.getAttribute("id")).appendChild(resultValue)
+          document.getElementById(controlValue.getAttribute("id")).appendChild(resultValue);
   
 
 
    document.getElementById("totalResult").innerHTML = sumValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   
-  let controlRemove = document.createElement("div")
-      controlRemove.setAttribute("class", "control")
-      controlRemove.setAttribute("id", "controlRemove" + count)
-        document.getElementById(controlField.getAttribute("id")).appendChild(controlRemove)
+  let controlRemove = document.createElement("div");
+      controlRemove.setAttribute("class", "control");
+      controlRemove.setAttribute("id", "controlRemove" + count);
+        document.getElementById(controlField.getAttribute("id")).appendChild(controlRemove);
 
-      let removeBtnLabel = document.createElement("button")
-        removeBtnLabel.setAttribute("type", "button")
-        removeBtnLabel.setAttribute("class", "button is-danger has-text-weight-bold")
-        removeBtnLabel.setAttribute("style", "width: 50px")
-        removeBtnLabel.setAttribute("onclick", `personRemove(this.parentNode, ${person.value})`)
-        removeBtnLabel.innerHTML = `<i class="fa-solid fa-trash"></i>`
-          document.getElementById(controlRemove.getAttribute("id")).appendChild(removeBtnLabel) 
+      let removeBtnLabel = document.createElement("button");
+        removeBtnLabel.setAttribute("type", "button");
+        removeBtnLabel.setAttribute("class", "button is-danger has-text-weight-bold");
+        removeBtnLabel.setAttribute("style", "width: 50px");
+        removeBtnLabel.setAttribute("onclick", `personRemove(this.parentNode, ${person.value})`);
+        removeBtnLabel.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+          document.getElementById(controlRemove.getAttribute("id")).appendChild(removeBtnLabel);
 }
 
 function coverage(){
   
   event.preventDefault();
   
-  let state = document.querySelector("select[id='state']").value
-  let plan = document.querySelector("select[id='plan']").value
-  let dentistry = document.querySelector("select[id='dentistry']").value
+  let state = document.querySelector("select[id='state']").value;
+  let plan = document.querySelector("select[id='plan']").value;
+  let dentistry = document.querySelector("select[id='dentistry']").value;
   
     document.getElementById('coverage').innerHTML = (jsonCover[state][plan][dentistry]);
 }
@@ -497,24 +497,24 @@ function coverage(){
 // }
 
 function personRemove(person, value) {
-  personCount -= 1
-  sumValue -= value
-  person.parentNode.remove()
+  personCount -= 1;
+  sumValue -= value;
+  person.parentNode.remove();
   document.getElementById("totalResult").innerHTML = sumValue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   
-   document.getElementById("state").setAttribute("onchange", "send()")
-   document.getElementById("plan").setAttribute("onchange", "send()")
-   document.getElementById("co-p").setAttribute("onchange", "send()")
-   document.getElementById("dentistry").setAttribute("onchange", "send()")
-   document.getElementById("age").setAttribute("onchange", "send()")
+   document.getElementById("state").setAttribute("onchange", "send()");
+   document.getElementById("plan").setAttribute("onchange", "send()");
+   document.getElementById("co-p").setAttribute("onchange", "send()");
+   document.getElementById("dentistry").setAttribute("onchange", "send()");
+   document.getElementById("age").setAttribute("onchange", "send()");
   
   if(personCount == 0) {
     document.getElementById("state").disabled = false;
     document.getElementById("plan").disabled = false;
     document.getElementById("co-p").disabled = false;
     document.getElementById("dentistry").disabled = false;
-    document.getElementById("totalResult").innerHTML = ""
-    document.getElementById('coverage').innerHTML = ""
+    document.getElementById("totalResult").innerHTML = "";
+    document.getElementById('coverage').innerHTML = "";
     
   }
 }
@@ -522,3 +522,5 @@ function personRemove(person, value) {
 $( function() {
   $( "#draggable" ).draggable();
 } );
+
+sent();
