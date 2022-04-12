@@ -522,7 +522,3 @@ function personRemove(person, value) {
 $( function() {
   $( "#draggable" ).draggable();
 } );
-
-$(document).ready( function () {
-  send()
-});
