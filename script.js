@@ -523,4 +523,4 @@ $( function() {
   $( "#draggable" ).draggable();
 } );
 
-sent();
+send();
