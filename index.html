@@ -62,7 +62,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!--SELECT-->
                 <div class="control is-expanded">
                   <div class="select is-link is-hovered is-fullwidth">
-                    <select name="state" id="state">
+                    <select name="state" id="state" onchange="send()">
                       <option value="bahia">Bahia</option>
 		      <option value="ceara">Ceará</option>
                     </select>
@@ -81,7 +81,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!--SELECT-->
                 <div class="control is-expanded">
                   <div class="select is-link is-hovered is-fullwidth">
-                    <select name="plan" id="plan">
+                    <select name="plan" id="plan" onchange="send()">
                       <option value="outpatient">Ambulatorial s/ acomodação</option>
                       <option value="nursery">Hospitalar c/ enfermaria</option>
                       <option value="apartment">Hospitalar c/ apartamento</option>
@@ -101,7 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!--SELECT-->
                 <div class="control is-expanded">
                   <div class="select is-link is-hovered is-fullwidth">
-                    <select name="co-p" id="co-p">
+                    <select name="co-p" id="co-p" onchange="send()">
                       <option value="withCoP">Com</option>
                       <option value="withoutCoP">Sem</option>
                     </select>
@@ -120,7 +120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!--SELECT-->
                 <div class="control is-expanded">
                   <div class="select is-link is-hovered is-fullwidth">
-                    <select name="dentistry" id="dentistry">
+                    <select name="dentistry" id="dentistry" onchange="send()">
                       <option value="withDentistry">Com</option>
                       <option value="withoutDentistry">Sem</option>
                     </select>
@@ -139,7 +139,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <!--SELECT-->
                 <div class="control is-expanded">
                   <div class="select is-link is-hovered is-fullwidth">
-                    <select name="age" id="age">
+                    <select name="age" id="age" onchange="send()">
                     <option value="0 a 18">0 a 18 anos</option>
                     <option value="19 a 23">19 a 23 anos</option>
                     <option value="24 a 28">24 a 28 anos</option>
@@ -159,11 +159,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
               <!--ENVIAR, ADICIONAR E RESETAR-->
               <div class="field is-grouped is-grouped-centered">
-                <p class="control">
+<!--                 <p class="control">
                   <button onclick="send(); coverage()" class="button is-link is-hovered" name="send" id="send" aria-label="Enviar">
                     <i class="fa-solid fa-paper-plane fa-beat"></i>
                   </button>
-                </p>
+                </p> -->
                 <p class="control">
                   <button onclick="add(); coverage()" class="button is-link is-hovered" name="add" id="add" aria-label="Adicionar">
                     <i class="fa-solid fa-plus fa-beat"></i>
